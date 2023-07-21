@@ -4,11 +4,7 @@ async function checkAuthentication() {
     try {
         const response = await fetch(apiurl + '/auth');
         const data = await response.json();
-        if (data.authenticated) {
-            return true;
-        } else {
-            return false;
-        }
+        return !!data.authenticated;
     } catch (error) {
         console.error('Error checking authentication:', error);
         return false;
