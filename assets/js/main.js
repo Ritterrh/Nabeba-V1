@@ -1,5 +1,5 @@
 const btn = document.getElementById('btn');
-const apiurl = 'http://192.168.178.20:3000';
+const apiurl = 'https://192.168.178.20:3000';
 async function checkAuthentication() {
     try {
         const response = await fetch(apiurl + '/auth');
